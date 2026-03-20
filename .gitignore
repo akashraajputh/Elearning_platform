@@ -1,0 +1,87 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Flask
+instance/*
+!instance/.gitkeep
+*.db
+*.sqlite
+*.sqlite3
+
+# Environment variables
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*~
+
+# OS files
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# R language files
+.Rhistory
+.RData
+.Ruserdata
+
+# Presentation and document files (if not needed in repo)
+*.pptx
+*.ppt
+*.docx
+*.doc
+
+# Screenshots and temporary images
+* (1).png
+* (2).png
+* (3).png
+pcView*.png
+Screenshot*.png
+
+# Duplicate files
+* - Copy.*
+* - copy.*
+
+# Uploads (user-generated content)
+static/uploads/*
+!static/uploads/.gitkeep
+

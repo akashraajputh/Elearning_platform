@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=development
+      - FLASK_DEBUG=1
+      - DATABASE_URL=sqlite:///smart_elearn.db
+    volumes:
+      - .:/app
+      - ./instance:/app/instance
+      - ./static/uploads:/app/static/uploads
+    restart: unless-stopped
+
+  # Optional: Add Redis for caching and background tasks
+  # redis:
+  #   image: redis:7-alpine
+  #   ports:
+  #     - "6379:6379"
+  #   restart: unless-stopped
+
+  # Optional: Add PostgreSQL for production
+  # db:
+  #   image: postgres:15-alpine
+  #   environment:
+  #     - POSTGRES_DB=smart_elearn
+  #     - POSTGRES_USER=elearn_user
+  #     - POSTGRES_PASSWORD=elearn_password
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+  #   restart: unless-stopped
+
+# volumes:
+#   postgres_data:
+
